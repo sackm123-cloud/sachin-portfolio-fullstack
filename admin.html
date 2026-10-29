@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426"><title>Portfolio Admin | Sachin Kumar</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/config.js"></script><script defer src="assets/admin.js"></script>
+</head>
+<body class="admin-body">
+  <header class="site-header"><a class="brand" href="index.html">SK<span>.</span></a><nav><a href="index.html">← Public portfolio</a></nav></header>
+  <main class="wrap admin-main">
+    <p class="eyebrow">PRIVATE CONTENT MANAGEMENT</p><h1>Portfolio admin</h1>
+    <p class="muted">Sign in with the admin account you create in Supabase Auth. Public visitors should not be able to manage projects or read messages.</p>
+    <section id="setup-warning" class="notice hidden"></section>
+    <section id="login-panel" class="admin-card">
+      <h2>Admin sign in</h2>
+      <form id="login-form" class="contact-form compact">
+        <label>Email<input name="email" type="email" required autocomplete="username"></label>
+        <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+        <button class="btn primary" type="submit">Sign in</button><p id="login-status" class="status" role="status"></p>
+      </form>
+    </section>
+    <section id="dashboard" class="hidden">
+      <div class="dashboard-bar"><div><h2>Dashboard</h2><p id="signed-in-as" class="muted"></p></div><button id="sign-out" class="btn secondary" type="button">Sign out</button></div>
+      <section class="admin-card">
+        <h2 id="project-editor-title">Add a project</h2>
+        <form id="project-form" class="contact-form">
+          <input type="hidden" name="id">
+          <label>Project title<input name="title" required maxlength="150"></label>
+          <label>Short description<textarea name="description" required maxlength="1200" rows="3"></textarea></label>
+          <label>Technologies (comma-separated)<input name="technologies" maxlength="300" placeholder="Python, ESP32, IoT"></label>
+          <label>Project link (optional)<input name="project_url" type="url" placeholder="https://..."></label>
+          <label>Image URL (optional)<input name="image_url" type="url" placeholder="https://..."></label>
+          <label class="check-row"><input name="featured" type="checkbox"> Feature this project</label>
+          <div class="actions"><button class="btn primary" type="submit">Save project</button><button id="cancel-edit" class="btn secondary hidden" type="button">Cancel edit</button></div>
+          <p id="project-status-admin" class="status" role="status"></p>
+        </form>
+      </section>
+      <section class="admin-card"><h2>Manage projects</h2><div id="admin-projects" class="admin-list"></div></section>
+      <section class="admin-card"><h2>Contact inbox</h2><p class="muted small">Messages are visible only to authorized admin users. Delete spam or messages you no longer need.</p><div id="admin-messages" class="admin-list"></div><p id="messages-status" class="status" role="status"></p></section>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>Portfolio admin</span><span>Keep your password private.</span></footer>
+</body>
+</html>
