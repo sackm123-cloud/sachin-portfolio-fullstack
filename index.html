@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071426">
+  <title>Sachin Kumar | Robotics, AI & STEM</title>
+  <meta name="description" content="Sachin Kumar's portfolio: robotics, AI, embedded systems, STEM education and automation projects.">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/config.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">SK<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      <a class="nav-admin" href="admin.html">Admin</a>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">ROBOTICS · AI · EMBEDDED SYSTEMS · STEM</p>
+        <h1>Building practical technology that <span>solves real problems.</span></h1>
+        <p class="lead">I'm Sachin Kumar — a robotics and STEM educator working across electronics, IoT, AI/ML, drones and project-based learning.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore projects</a><a class="btn secondary" href="#contact">Contact me</a></div>
+      </div>
+      <div class="hero-panel">
+        <div class="orb">SK</div><p class="panel-label">FOCUS AREAS</p>
+        <div class="tag-list"><span>Robotics</span><span>AI / ML</span><span>ESP32 & IoT</span><span>Drone Technology</span><span>STEM Education</span></div>
+        <p class="panel-note">Learn by building. Improve by testing. Deliver with purpose.</p>
+      </div>
+    </section>
+    <section id="about" class="section wrap">
+      <p class="eyebrow">ABOUT</p><h2>Technology, made tangible.</h2>
+      <p class="section-intro">I design and teach hands-on learning experiences that connect programming, electronics and engineering. This portfolio highlights selected builds, learning tools and technical experiments.</p>
+      <div class="three-grid">
+        <article class="info-card"><span class="card-icon">01</span><h3>Build</h3><p>Prototype with microcontrollers, sensors, motors and practical engineering workflows.</p></article>
+        <article class="info-card"><span class="card-icon">02</span><h3>Teach</h3><p>Turn complex ideas into step-by-step STEM activities and project-based learning.</p></article>
+        <article class="info-card"><span class="card-icon">03</span><h3>Improve</h3><p>Test, document and iterate toward useful, maintainable technical solutions.</p></article>
+      </div>
+    </section>
+    <section id="skills" class="section wrap">
+      <p class="eyebrow">CAPABILITIES</p><h2>Skills & technologies</h2>
+      <div class="skill-grid">
+        <div><h3>Robotics & Electronics</h3><p>Arduino · ESP32 · Sensors · Motor control · Circuit prototyping</p></div>
+        <div><h3>Software & AI</h3><p>Python · C · JavaScript · AI/ML fundamentals · Computer vision</p></div>
+        <div><h3>Connected Systems</h3><p>IoT · Wi-Fi devices · APIs · Data pipelines · Cloud integration</p></div>
+        <div><h3>STEM & Fabrication</h3><p>Project-based curriculum · Drone technology · 3D printing · Digital design</p></div>
+      </div>
+    </section>
+    <section id="projects" class="section wrap">
+      <div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2>Projects</h2></div><p class="muted">Projects load from the Supabase database.</p></div>
+      <div id="project-status" class="status" role="status">Loading projects…</div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+    <section id="contact" class="section wrap contact-section">
+      <div><p class="eyebrow">GET IN TOUCH</p><h2>Have a project or learning idea?</h2><p class="section-intro">Send a message about robotics, AI, STEM training, collaboration or technical projects.</p><p class="muted small">Your message is stored privately for the portfolio owner; visitors cannot read submitted messages.</p></div>
+      <form id="contact-form" class="contact-form">
+        <label>Your name<input name="name" required maxlength="100" autocomplete="name"></label>
+        <label>Email address<input name="email" type="email" required maxlength="254" autocomplete="email"></label>
+        <label>Subject<input name="subject" maxlength="160"></label>
+        <label>Message<textarea name="message" required minlength="10" maxlength="5000" rows="5"></textarea></label>
+        <label class="honeypot" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button class="btn primary" type="submit">Send message</button><p id="contact-status" class="status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer wrap"><span>© <span id="year"></span> Sachin Kumar</span><span>Built with HTML, CSS, JavaScript & Supabase</span></footer>
+</body>
+</html>
